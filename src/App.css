@@ -1,0 +1,353 @@
+/* Defining theme colors */
+:root {
+  --base-color: #00796b; 
+  --light-color: #e0f2f1; 
+  --medium-color: #004d40; 
+  --hover-color: #009688; 
+  --disabled-color: #bdbdbd; 
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; 
+  color: var(--medium-color);
+}
+
+/* padding from left and right */
+.app-container {
+  padding: 0 2px;
+}
+
+/* search box CSS*/
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* search input styling  */
+.search-input {
+  flex-grow: 1; 
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--base-color);
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* highlighting search box when inputting text */
+.search-input:focus {
+  outline: none;
+  border-color: var(--hover-color);
+  box-shadow: 0 0 5px var(--hover-color);
+}
+
+/* table styling */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  table-layout: fixed; 
+}
+
+.data-table th,
+.data-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+}
+
+.data-table th {
+  font-weight: bold;
+  background-color: var(--medium-color);
+  color: #ffffff;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: var(--light-color);
+}
+
+/* sorting column styling */
+.sortable-header {
+  cursor: pointer;
+  position: relative;
+  padding-right: 25px; 
+}
+
+/* keeps the sorted column highlighted */
+.sortable-header.active {
+  background-color: var(--hover-color); 
+  color: #fff; 
+}
+
+/* change color on hover */
+.sortable-header:hover {
+  background-color: var(--hover-color);
+}
+
+/* pagination styling */
+.sort-icon-wrapper {
+  position: absolute;
+  right: 10px; /* Adds space from the right edge */
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.pagination-container div {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--medium-color);
+}
+
+
+/* pagination buttons */
+.pagination-buttons button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--base-color);
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+.pagination-buttons button:hover {
+  background-color: var(--hover-color);
+}
+
+.pagination-buttons button:disabled {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+/* pagination dropdown */
+.pagination-container select {
+  padding: 6px 12px; 
+  font-size: 0.9rem; 
+  border-radius: 5px; 
+  border: 1px solid var(--base-color); 
+  background-color: var(--light-color); 
+  color: var(--medium-color); 
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pagination-container select:focus {
+  border-color: var(--hover-color); 
+  box-shadow: 0 0 5px var(--hover-color); 
+  outline: none; 
+}
+
+.pagination-container select:hover {
+  border-color: var(--hover-color); 
+}
+
+/* filter side panel styling */
+.side-panel {
+  width: 180px;
+  padding: 15px;
+  background: linear-gradient(to bottom, var(--light-color), #ffffff); 
+  border: none;
+  border-radius: 5px; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+  height: auto; 
+  flex-grow: 0; 
+  flex-shrink: 0; 
+  display: flex;
+  flex-direction: column; 
+}
+
+
+/* filter group styling */
+.filter-group {
+  margin-bottom: 10px;
+  transition: all 0.3s ease; 
+  overflow: hidden; 
+}
+
+.filter-header {
+  font-size: 1rem;
+  font-weight: normal;
+  cursor: pointer;
+  padding: 5px 0; 
+    margin: 0;
+  background-color: var(--light-color);
+  color: var(--medium-color);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.filter-header.active {
+  background-color: var(--base-color);
+  color: #ffffff;
+  border-left: 4px solid var(--hover-color);
+}
+
+.filter-options {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+/* checkbox styling */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  accent-color: var(--base-color); 
+  margin-right: 10px;
+}
+
+.closed-drawer {
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* side panel spacing */
+.side-panel h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  color: var(--medium-color);
+  text-align: left;
+}
+
+/* sliding drawer for filters */
+.filter-options {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.open-drawer {
+  max-height: 300px; 
+  overflow: visible;
+}
+
+.closed-drawer {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.filter-options label {
+  display: flex;
+  align-items: center;
+}
+
+.filter-options input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.filter-group select {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid var(--base-color);
+  border-radius: 5px;
+  background-color: var(--light-color);
+  color: var(--medium-color);
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.filter-group select:focus {
+  border-color: var(--hover-color);
+  box-shadow: 0 0 5px var(--hover-color);
+  outline: none;
+}
+
+.filter-group select:hover {
+  border-color: var(--hover-color);
+}
+
+/* main content layout */
+.main-content {
+  position: relative; 
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px;
+  align-items: stretch; 
+}
+
+.table-container {
+  flex: 1; 
+}
+
+/* selected filter  */
+.filter-header.active {
+  background-color: var(--base-color); 
+  color: #ffffff; 
+}
+
+.side-panel hr {
+  border: none;
+  border-top: 1px solid var(--medium-color); 
+  margin: 10px 0;
+}
+
+/* divider between filter options */
+hr {
+  border: none;
+  border-top: 1px solid var(--medium-color); 
+  margin: 10px 0;
+}
+
+/* header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--base-color);
+  color: #ffffff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; 
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.reset-btn {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background-color: var(--base-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.reset-btn:hover {
+  background-color: var(--hover-color);
+}
+
