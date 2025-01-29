@@ -20,7 +20,7 @@ Make sure you have the following installed on your system:
 To set up and run the project locally:  
 1. Clone the repository using the command:  
    `git clone https://github.com/imsaurabh1/SpecificationDataCode.git`
-   Navigate to the project directory:  
+2. Navigate to the project directory:  
    `cd SpecificationDataCode`  
 
 3. Install dependencies:  
