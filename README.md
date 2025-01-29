@@ -18,13 +18,15 @@ Make sure you have the following installed on your system:
 ## Installation and Setup
 
 To set up and run the project locally:  
-1. Navigate to the project directory:  
-   `cd SpecificationDataApp`  
+1. Clone the repository using the command:  
+   `git clone https://github.com/imsaurabh1/SpecificationDataCode.git`
+   Navigate to the project directory:  
+   `cd SpecificationDataCode`  
 
-2. Install dependencies:  
+3. Install dependencies:  
    `npm install`  
 
-3. Start the development server:  
+4. Start the development server:  
    `npm start`  
    The application will be available at `http://localhost:3000`.
 
