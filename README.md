@@ -9,6 +9,9 @@ A **Specification Data Application** is a react app which imports data from data
 - **Pagination** - It gives easy navigation for larnge number of records.  
 - **Responsive Design** - It adjustes the content on the web page as per different screen sizes.  
 
+## Hosted Website 
+- https://imsaurabh1.github.io/SpecificationData/
+  
 ## Prerequisites
 
 Make sure you have the following installed on your system:  
